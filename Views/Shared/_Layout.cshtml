@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("DOES_BUSINESS_IN", "Index", "DOES_BUSINESS_IN", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("HAS_SKILL", "Index", "HAS_SKILL", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("ORDERS", "Index", "ORDERs", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("PRODUCED_IN", "Index", "PRODUCED_IN", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("PRODUCT_LINE", "Index", "PRODUCT_LINE", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("PRODUCTS", "Index", "PRODUCTs", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("RAW_MATERIAL", "Index", "RAW_MATERIAL", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SALES_PERSON", "Index", "SALES_PERSON", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SALES_TERRITORY", "Index", "SALES_TERRITORY", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SKILLS", "Index", "SKILLs", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SUPERVISORS", "Index", "SUPERVISORs", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("SUPPLIES", "Index", "SUPPLIES", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("USES", "Index", "USES", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("VENDORS", "Index", "VENDORs", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("WORK_CENTER", "Index", "WORK_CENTER", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("WORKS_IN", "Index", "WORKS_IN", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
